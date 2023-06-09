@@ -1,62 +1,58 @@
-   
-.border{
-     background-image:url(1.jpg);
-    width:100%;
-    height:75vh;
-    color:white;
-    padding-top: 150px;
-    padding-left: -100px;
-    text-align: center;
-    /*line-height: 120px;*/
-    
+.line{
+	margin-top: 0px;
+    background-color: #6082B6;
+    color: white;
+    height: -5px;
+    font-size: 18px;
+    display:inline-block;
+    -webkit-animation:  scrolling-left1 20s linear infinite;
+    animation: scrolling-left1 20s linear infinite;
 }
-.container {
-      max-width: 400px;
-      margin: 0 auto;
-      background-color: #080708	;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .form-group {
-      margin-bottom: 20px;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    
-    .form-group .btn {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      background-color: #4caf50;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-    .result {
-     /* margin-top: 20px;
-      padding: 10px;
-      background-color: #f1f1f1;
-      border-radius: 5px;*/
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #f1f1f1;
-      border-radius: 5px;
-     }
-     .w{
-     	color: green;
-     }
+@keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+      100% {transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);}}
+          .jpg{
+    width:100%;
+    display:flex;
+  justify-content: center;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+div.box{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+div.card{
+    width: 390px;
+    height:600px;
+    text-align: center; 
+    border: 3px solid black;
+    background-color: grey;
+    justify-content: space-around;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
